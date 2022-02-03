@@ -3,6 +3,7 @@ import Image from "next/image";
 import Featured from "../components/Featured";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import PizzaList from "../components/PizzaList";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Featured />
+      <PizzaList />
     </div>
   );
 }

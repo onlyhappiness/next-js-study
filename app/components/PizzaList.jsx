@@ -1,5 +1,6 @@
 import React from "react";
 import PizzaCard from "./PizzaCard";
+import styles from "../styles/PizzaList.module.css";
 
 function PizzaList() {
   return (
@@ -16,6 +17,13 @@ function PizzaList() {
         modi, vel, ad expedita!
       </p>
       <div className={styles.wrapper}>
+        <PizzaCard />
+        <PizzaCard />
+        <PizzaCard />
+        <PizzaCard />
+        <PizzaCard />
+        <PizzaCard />
+        <PizzaCard />
         <PizzaCard />
       </div>
     </div>

@@ -1,7 +1,9 @@
 ### next?
 
 ```
-next is a react frontend development web framework create by vercel that enables functionality such as server-side rendering and static site generation
+next is a react frontend development web framework
+create by vercel that enables functionality
+such as server-side rendering and static site generation
 ```
 
 ---
@@ -9,7 +11,9 @@ next is a react frontend development web framework create by vercel that enables
 ### Server-Side-Rendering?
 
 ```
-Unlike a traditional React app where the entire application is loaded and rendered on the client, Next.js allows the first page load to be rendered by the server, which is great fo SEO & performance
+Unlike a traditional React app
+where the entire application is loaded and rendered on the client,
+Next.js allows the first page load to be rendered by the server, which is great fo SEO & performance
 ```
 
 ---
@@ -36,15 +40,7 @@ Unlike a traditional React app where the entire application is loaded and render
 
 ---
 
-### Error..?
-
-next/babel을 찾을 수 없다는 에러
-
-eslint 때문인가?
-
-> ㄴㄴ
-
----
+<br>
 
 ### next/babel 에러 해결법
 
@@ -64,9 +60,3 @@ eslint 때문인가?
   "extends": ["next/babel"]
 }
 ```
-
----
-
-### img 태그 쓰지 않음
-
-- next/image가 있음

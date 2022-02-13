@@ -6,14 +6,15 @@ create by vercel that enables functionality
 such as server-side rendering and static site generation
 ```
 
----
+<br>
 
 ### Server-Side-Rendering?
 
 ```
 Unlike a traditional React app
 where the entire application is loaded and rendered on the client,
-Next.js allows the first page load to be rendered by the server, which is great fo SEO & performance
+Next.js allows the first page load to be rendered by the server,
+which is great fo SEO & performance
 ```
 
 ---
@@ -60,3 +61,9 @@ Next.js allows the first page load to be rendered by the server, which is great 
   "extends": ["next/babel"]
 }
 ```
+
+---
+
+### next/head
+
+- 검색에 최적화

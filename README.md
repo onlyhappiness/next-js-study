@@ -67,3 +67,13 @@ which is great fo SEO & performance
 ### next/head
 
 - 검색에 최적화
+
+---
+
+### Where will next.js be used?
+
+> https://jobs.netflix.com/
+
+> https://www.tiktok.com/en
+
+> 트위치, 깃허브, 나이키, 마블 등등..

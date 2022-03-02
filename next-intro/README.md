@@ -88,3 +88,8 @@ ex)
 
 > module.css <br>
 > 유저가 봤을 때 class 이름이 무작위로 됨
+
+<br>
+
+> `<style jsx>` <br>
+> module.css보다 class 이름이 기이하게 됨

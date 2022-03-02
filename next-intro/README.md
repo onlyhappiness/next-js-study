@@ -93,3 +93,14 @@ ex)
 
 > `<style jsx>` <br>
 > module.css보다 class 이름이 기이하게 됨
+
+---
+
+<br>
+
+### custom App
+
+> \_app.js
+
+> \_app.js는 청사진 같은 파일 <br>
+> 가장 먼저 실행하는 파일이다.

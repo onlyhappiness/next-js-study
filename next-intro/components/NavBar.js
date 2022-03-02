@@ -14,6 +14,7 @@ function NavBar() {
         <a className={router.pathname === '/about' ? 'active' : ''}>about</a>
       </Link>
 
+      {/* FIXME: style jsx global로 하면 전체 적용되는 css가 된다. */}
       <style jsx>{`
         nav {
           background-color: tomato;

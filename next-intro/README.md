@@ -8,6 +8,14 @@
 
 <br>
 
+#### next/head
+
+- 검색에 최적화
+
+---
+
+<br>
+
 ### next/router
 
 ```

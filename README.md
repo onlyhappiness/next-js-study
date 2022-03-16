@@ -2,7 +2,7 @@
 
 1. [Next가 뭐에욥? (´･ω･`)?](#1.-next?)
 
-2. <a href="https://github.com/onlyhappiness/next-js-study/tree/main/next-intro">Next에 대해 조금 더 알아보자!</a>
+2. <a href="https://github.com/onlyhappiness/next-js-study/tree/main/next-intro#readme">Next에 대해 조금 더 알아보자!</a>
 
 <br>
 

@@ -17,9 +17,9 @@
 #### next가 뭐에욥? (´･ω･`)?
 
 ```
-next is a react frontend development web framework
-create by vercel that enables functionality
-such as server-side rendering and static site generation
+next는 vercel이 만든 react 프론트엔드 웹 프레임워크이다.
+
+(SSR과 정적 사이트 생성과 같은 기능을 제공하는)
 ```
 
 <br>
@@ -27,10 +27,15 @@ such as server-side rendering and static site generation
 #### Server-Side-Rendering?
 
 ```
-Unlike a traditional React app
-where the entire application is loaded and rendered on the client,
-Next.js allows the first page load to be rendered by the server,
-which is great fo SEO & performance
+만약 데이터를 불러오는 작업이 있을 경우,
+
+클라이언트에서 데이터 렌더링되는 기존의 react 앱과 다르게
+
+next는 페이지 로드될 때 데이터를 서버에서 랜더링이 된다.
+
+이와 같이 페이지 로드될 때, 서버에서 데이터 랜더링 되는 작업을
+
+Server-Side-Rendering이라고 부르는 듯 하다.
 ```
 
 ---

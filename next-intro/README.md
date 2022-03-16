@@ -18,28 +18,43 @@
 
 ### next/router
 
-```
-file name = url name
+#### 1. 파일이름 = url 이름
 
-ex)
-    file name = about.js
-    url = /about
+```
+  file name = url name
 ```
 
-> **유저에게 보여주고 싶은 게 있다면, <br> page 폴더에서 export default function을 해야함**
+```
+  file name = about.js
+  url = /about
+```
 
-> component는 반영되지 않음 <br><br> ** 예외사항! ** <br>
-> index.js는 반영되지 않음
+> 만약 파일 이름이 about.js 라면 <br> url 주소도 /about이 된다.
 
----
+> component는 url 주소에 반영되지 않음
 
 <br>
 
-### client-side-rendering
+> **예외사항!** <br>
+> index.js도 반영되지 않음
 
+<br>
+
+> **유저에게 보여주고 싶은 게 있다면, <br> page 폴더에서 export default function을 해야함**
+
+<br>
+
+#### 2. 페이지 이동
+
+> react-router-dom이 필요없어!
+
+```js
+const router = useRouter();
 ```
-브라우저가 js를 가져와서 client-side의 js가 모든 UI를 만듬
-```
+
+> 요거 쓰면 됨!
+
+<br>
 
 ---
 
@@ -61,27 +76,17 @@ ex)
 
 <br>
 
-```
-ex)
-    <Link href='/'>
-      <a>Home</a>
-    </Link>
-
+```js
+<Link href='/'>
+  <a>Home</a>
+</Link>
 ```
 
 ---
 
 <br>
 
-### next/router
-
-> react-router-dom이 필요없어!
-
----
-
-<br>
-
-### next.js in css
+### next.js 에서는 css 어떻게 사용할까?
 
 #### 1. module.css
 
@@ -97,7 +102,7 @@ ex)
 <br>
 
 > `<style jsx>` <br>
-> module.css보다 class 이름이 기이하게 됨
+> module.css보다 class 이름이 더 기이하게 됨
 
 ---
 
@@ -150,7 +155,7 @@ ex)
 Found a change in next.config.js. Restart the server to see the changes in effect.
 ```
 
-> 서버 재시작하면 된다.
+> 말 그대로 서버 재시작하면 된다.
 
 <br>
 
@@ -182,7 +187,7 @@ Found a change in next.config.js. Restart the server to see the changes in effec
 
 <br>
 
-### SSR(Server-Side-Rendering)
+### SSR(Server-Side-Rendering) 구현
 
 ```
 export async function getServerSideProps() {

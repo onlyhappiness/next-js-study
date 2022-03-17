@@ -1,16 +1,26 @@
-## Timeline
-
-#### 2.3 Server Side Rendering
-
-> https://nomadcoders.co/nextjs-fundamentals/lobby
-
----
-
-<br>
+## next-intro
 
 #### next/head
 
-- 검색에 최적화
+- SEO (Search Engine Optimization)
+
+- 검색 엔진 최적화
+
+> https://nextjs.org/docs/api-reference/next/head
+
+```js
+import Head from 'next/head';
+
+export default function Home() {
+  return (
+    <>
+      <Head>
+        <title>제목</title>
+      </Head>
+    </>
+  );
+}
+```
 
 ---
 
@@ -18,30 +28,26 @@
 
 ### next/router
 
+<br>
+
 #### 1. 파일이름 = url 이름
 
 ```
   file name = url name
-```
 
-```
+ex)
   file name = about.js
   url = /about
 ```
 
-> 만약 파일 이름이 about.js 라면 <br> url 주소도 /about이 된다.
-
+> page 폴더 내 파일 이름이 about.js 라면 <br>
+> url 주소도 /about이 된다. <br>
 > component는 url 주소에 반영되지 않음
-
-<br>
 
 > **예외사항!** <br>
 > index.js도 반영되지 않음
 
 <br>
-
-> **유저에게 보여주고 싶은 게 있다면, <br> page 폴더에서 export default function을 해야함**
-
 <br>
 
 #### 2. 페이지 이동
@@ -54,6 +60,8 @@ const router = useRouter();
 
 > 요거 쓰면 됨!
 
+> https://nextjs.org/docs/api-reference/next/router
+
 <br>
 
 ---
@@ -62,7 +70,7 @@ const router = useRouter();
 
 ### pre-rendering
 
-> js와 react.js가 로딩되지 않았더라도 콘텐츠를 볼 수 있음
+> js와 react.js가 로딩되지 않았더라도 컨텐츠를 볼 수 있음
 
 > 단, js와 react.js를 불러오지 못하면 컨텐츠만 볼 수 있음
 
@@ -81,6 +89,8 @@ const router = useRouter();
   <a>Home</a>
 </Link>
 ```
+
+> https://nextjs.org/docs/api-reference/next/link
 
 ---
 
@@ -189,12 +199,11 @@ Found a change in next.config.js. Restart the server to see the changes in effec
 
 ### SSR(Server-Side-Rendering) 구현
 
-```
+```js
 export async function getServerSideProps() {
-  이 자리에 어떤 코드를 쓰던지 간에
-  이 코드는 server쪽에서만 작동함.
-
-  오직 백엔드에서만 작동
+  //이 자리에 어떤 코드를 쓰던지 간에
+  //이 코드는 server쪽에서만 작동함.
+  //오직 백엔드에서만 작동
 }
 ```
 
@@ -210,26 +219,6 @@ export async function getServerSideProps() {
 > 각각의 장단점을 잘 따져서 올바르게 사용하자
 
 <br>
-
----
-
-<br>
-
-#### as가 난다요?
-
-```js
-<Link
-  href={{
-    pathname: `/movies/${movie.id}`,
-    query: {
-      title: movie.original_title,
-    },
-  }}
-  as={`/movies/${movie.id}`}
->
-  <a>{movie.original_title}</a>
-</Link>
-```
 
 ---
 

@@ -8,8 +8,6 @@
 
 ---
 
-<br>
-
 ### 1.next
 
 <br>
@@ -38,19 +36,20 @@ next는 페이지 로드될 때 데이터를 서버에서 랜더링이 된다.
 Server-Side-Rendering이라고 부르는 듯 하다.
 ```
 
+> SSR에 대해 좀 더 자세히 알고 싶다면
+> <a href="https://nextjs.org/learn/foundations/how-nextjs-works/rendering">여기</a>를 참고할 것
+
 ---
 
-#### Other Next.js Benefits
+<br>
 
-1. Easy page routing
+#### next.js의 장점
 
-2. API routes
+1. 페이지 이동이 쉽다! (next/router)
 
-3. Out of box TypeScript & Sass
+2. SSR, CSR을 지원한다!
 
-4. Static site generation (next export)
-
-5. Easy deployment
+3. 배포하기 쉽다! (vercel)
 
 ---
 
@@ -82,7 +81,7 @@ yarn create next-app
 
 <br>
 next/babel 에러 해결법! <br>
-이거 써보셈
+이렇게 해보자
 
 <br>
 
@@ -97,7 +96,8 @@ next/babel 에러 해결법! <br>
 
 <br>
 
-> 2 .eslintrc 파일 이거 넣어
+> 2 .eslintrc 파일에 <br>
+> 다음과 같이 작성한다.
 
 ```json
 {

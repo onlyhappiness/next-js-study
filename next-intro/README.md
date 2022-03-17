@@ -214,9 +214,13 @@ export async function getServerSideProps() {
 > SSR을 사용하게 되면 2가지 선택지가 생긴다 <br>
 
 > 1. 데이터가 유효할 때 화면이 보여지게 되는 게 좋은지? <br> (SSR) <br>
-> 2. loading 화면을 보여준 다음에 데이터를 받는 것이 좋은지? <br> (데이터를 불러오기 전까지 loading)
+> 2. loading 화면을 보여준 다음에 데이터를 받는 것이 좋은지? <br> (데이터를 불러오기 전까지 loading) <br><br> 각각의 장단점을 잘 따져서 올바르게 사용하자
 
-> 각각의 장단점을 잘 따져서 올바르게 사용하자
+<br>
+
+#### 어떤 미들웨어랑 써야할지에 대한 예시
+
+> https://github.com/vercel/next.js/tree/canary/examples
 
 <br>
 

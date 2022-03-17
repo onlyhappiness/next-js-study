@@ -1,33 +1,35 @@
 // TODO: 만약 React라면?
 // react helmet을 통해 head를 관리
 import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import Seo from '../components/Seo';
 
 export default function Home({ results }) {
-  const [movies, setMovies] = useState([]);
+  const router = useRouter();
 
-  // useEffect(() => {
-  //   // TODO: 익명 함수로 바로 호출하였고,
-  //   // await를 두 번 사용하여 promise를 해결함
-  //   (async () => {
-  //     const { results } = await (await fetch(`/api/movies`)).json();
-
-  //     // const json = await response.json();
-  //     // console.log(results);
-
-  //     setMovies(results);
-  //   })();
-  // }, []);
+  // const router = useRouter();
+  const onClick = (id, title) => {
+    router.push(`/movies/${title}/${id}`);
+  };
 
   return (
     <div className='container'>
       <Seo title='Home' />
       {/* {!movies && <h4>Loading..</h4>} */}
       {results?.map((movie) => (
-        <div className='movie' key={movie.id}>
-          <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} />
-          <h4>{movie.original_title}</h4>
+        <div
+          onClick={() => onClick(movie.id, movie.original_title)}
+          className='movie'
+          key={movie.id}
+        >
+          <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
+          <h4>
+            <Link href={`/movies/${movie.original_title}/${movie.id}`}>
+              <a>{movie.original_title}</a>
+            </Link>
+          </h4>
         </div>
       ))}
 
@@ -37,6 +39,9 @@ export default function Home({ results }) {
           grid-template-columns: 1fr 1fr;
           padding: 20px;
           gap: 20px;
+        }
+        .movie {
+          cursor: pointer;
         }
         .movie img {
           max-width: 100%;

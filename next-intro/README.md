@@ -212,3 +212,38 @@ export async function getServerSideProps() {
 <br>
 
 ---
+
+<br>
+
+#### as가 난다요?
+
+```js
+<Link
+  href={{
+    pathname: `/movies/${movie.id}`,
+    query: {
+      title: movie.original_title,
+    },
+  }}
+  as={`/movies/${movie.id}`}
+>
+  <a>{movie.original_title}</a>
+</Link>
+```
+
+---
+
+<br>
+
+#### [...params].js
+
+> router query를 배열로 보낸다.
+
+```
+ex)
+  params: Array(2)
+    0: "Spider-Man: No Way Home"
+    1: "634649"
+```
+
+> 이렇게 보내도 해당 url이 나옴

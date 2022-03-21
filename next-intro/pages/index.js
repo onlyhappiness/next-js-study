@@ -14,6 +14,8 @@ export default function Home({ results }) {
     router.push(`/movies/${title}/${id}`);
   };
 
+  // console.log('어디서 나옴?', results);
+
   return (
     <div className='container'>
       <Seo title='Home' />

@@ -143,7 +143,7 @@ const router = useRouter();
 
 > 말 그대로 redirect <br><br> url 주소를 바꾼다.
 
-```json
+```js
 // redirects 설정
   async redirects() {
     return [
@@ -183,7 +183,7 @@ Found a change in next.config.js. Restart the server to see the changes in effec
 
 > **다시 말해, redirect와 비슷하나 <br> 유저가 url 변화를 볼 수 없다.**
 
-```json
+```js
 // rewrite 설정
   async rewrites() {
     return [

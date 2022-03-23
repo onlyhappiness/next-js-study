@@ -167,3 +167,24 @@ export default Post;
 ---
 
 1. getServerSideProps
+
+```js
+function Page({ data }) {
+  // Render Data
+}
+
+// 모든 요청을 호춯
+export async function getServerSideProps() {
+  const res = await fetch(`https://.../data`);
+  const data = await res.json();
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
+```
+
+> `getServerSideProps`는 `getStaticProps`와 비슷
+> <br>차이점은 `getServerSideProps`는 빌드 시간이 아니라 모든 요청에 ​​대해 실행된다는 것

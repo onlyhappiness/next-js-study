@@ -5,9 +5,21 @@ import Image from 'next/image';
 import Banner from '../components/banner/banner';
 import Card from '../components/card/card';
 
-import coffeeStores from '../data/coffee-stores.json';
+import coffeeStoresData from '../data/coffee-stores.json';
 
-export default function Home() {
+export async function getStaticProps(context) {
+  console.log('hi getStaticProps');
+
+  return {
+    props: {
+      coffeeStores: coffeeStoresData,
+    },
+  };
+}
+
+export default function Home(props) {
+  console.log('props 나오셈', props);
+
   const handleOnBannerBtnClick = () => {
     console.log('Hi banner');
   };
@@ -29,18 +41,25 @@ export default function Home() {
           <Image src='/static/hero-image.png' width={700} height={400} />
         </div>
 
-        <div className={styles.cardLayout}>
-          {coffeeStores.map((coffeeStore) => {
-            return (
-              <Card
-                name={coffeeStore.name}
-                imgUrl={coffeeStore.imgUrl}
-                href={`/coffee-store/${coffeeStore.id}`}
-                // className={styles.card}
-              />
-            );
-          })}
-        </div>
+        {props.coffeeStores.length > 0 && (
+          <>
+            <h2 className={styles.heading2}>Toronto stores</h2>
+            <div className={styles.cardLayout}>
+              {/* SSR로 전달한 coffeeStores */}
+              {props.coffeeStores.map((coffeeStore) => {
+                return (
+                  <Card
+                    key={coffeeStore.id}
+                    name={coffeeStore.name}
+                    imgUrl={coffeeStore.imgUrl}
+                    href={`/coffee-store/${coffeeStore.id}`}
+                    // className={styles.card}
+                  />
+                );
+              })}
+            </div>
+          </>
+        )}
       </main>
 
       {/* <footer className={styles.footer}></footer> */}
